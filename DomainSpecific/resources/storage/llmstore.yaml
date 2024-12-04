@@ -1,0 +1,41 @@
+allow-other: true
+
+logging:
+  type: syslog
+  level: log_debug
+
+components:
+  - libfuse
+  - file_cache
+  - attr_cache
+  - azstorage
+
+libfuse:
+  attribute-expiration-sec: 120
+  entry-expiration-sec: 120
+  negative-entry-expiration-sec: 240
+
+file_cache:
+  path: /mnt/resource/blobfusetmp
+  timeout-sec: 360
+  max-size-mb: 4096
+
+attr_cache:
+  timeout-sec: 7200
+
+# To be filled.
+azstorage:
+  type: adls
+  account-name: ${account_name}
+  container: ${container_name}
+  endpoint: ${az_storage_endpoint}
+  mode: msi
+  appid: ${appid}
+
+# To be filled.
+resource_id: ${resource_id}
+
+# The upper part is configuration of azure storage account.
+
+workspace_dir: ./workspace/
+mount: true

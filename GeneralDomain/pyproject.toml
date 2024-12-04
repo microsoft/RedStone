@@ -1,0 +1,39 @@
+[build-system]
+requires = ["flit_core >=3.2, <4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "redstone-cc"
+description = "Library for reproducing the general CC part of RedStone dataset from the released index Parquet file."
+version='0.0.1'
+requires-python = ">=3.8"
+authors = [
+  { name = "Tengchao Lv", email = "tengchaolv@microsoft.com" },
+  { name = "Qinzheng Sun", email = "qinsu@microsoft.com" }
+]
+dependencies = [
+  'numpy == 1.*',
+  'datasketch',
+  'regex',
+  'nltk',
+  'ftfy',
+  'sentence_splitter',
+  'brotlicffi',
+  'faust-cchardet',
+  'lxml',
+  'trafilatura[all]',
+  'warcio',
+  'loguru',
+  'stopit',
+  "fasttext; platform_system != 'Windows'",
+  "fasttext-wheel == 0.9.2; platform_system == 'Windows'",
+  'pyarrow',
+  'tqdm',
+  'requests',
+]
+
+[project.optional-dependencies]
+dev = [
+  'pytest',
+  'black',
+]

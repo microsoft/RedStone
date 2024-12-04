@@ -1,0 +1,40 @@
+{
+    "name": "template_network",
+    "description": "Toy example of network.",
+    "date": "20230713",
+    "version": "1.0.0",
+    "author": "yanghuan",
+    "backend": "Native",
+    
+    "input":
+    {
+        "data1":
+        {
+            "type": "Mem_StrList",
+            "value": ["1", "2", "3", "4", "5"]
+        }
+    },
+    
+    "output":
+    {
+        "data2":
+        {
+            "type": "Mem_StrList"
+        }
+    },
+    
+    "layer":
+    {
+        "layer1":
+        {
+            "type": "Data_Sample",
+            "joint": "Default",
+            "param":
+            {
+                "N": 2
+            },
+            "input": ["data1"],
+            "output": ["data2"]
+        }
+    }
+}

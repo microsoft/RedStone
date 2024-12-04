@@ -1,0 +1,4 @@
+__pycache__/
+dependency/models/
+env_ready
+workspace

@@ -1,0 +1,78 @@
+{
+    "name": "cc_openquestion_extraction",
+    "description": "open question extraction from cc parquet file - 202323.",
+    "date": "20240527",
+    "version": "1.0.0",
+    "author": "yanghuan",
+    "backend": "Native",
+    
+    "input":
+    {
+        "pq_name_list_file_path":
+        {
+            "type": "Mem_Str",
+            "value": "{workspace_dir}/cc_pqs/raw/CC-MAIN-2023-23/pqs.CC-MAIN-2023-23.txt"
+        },
+        "filtered_pq_name_list_file_path":
+        {
+            "type": "Mem_Str",
+            "value": "{workspace_dir}/cc_pqs/openquestion/CC-MAIN-2023-23/paths.{worker_id}.txt"
+        }
+    },
+    
+    "output":
+    {
+        "filtered_pq_name_list_file_path":
+        {
+            "type": "Mem_Str"
+        }
+    },
+    
+    "layer":
+    {
+        "layer01":
+        {
+            "type": "From_Line_File",
+            "joint": "Default",
+            "input": ["pq_name_list_file_path"],
+            "output": ["pq_names"]
+        },
+        "layer01_par":
+        {
+            "type": "Data_Partition",
+            "joint": "Default",
+            "input": ["pq_names"],
+            "output": ["pq_names"]
+        },
+        "layer01_sam":
+        {
+            "type": "Data_Sample",
+            "joint": "Default",
+            "param":
+            {
+                "N": -1
+            },
+            "input": ["pq_names"],
+            "output": ["pq_names"]
+        },
+        "layer02":
+        {
+            "type": "OpenQuestion_Filter",
+            "joint": "FlatMap",
+            "param":
+            {
+                "INPUT_FOLDER": "{workspace_dir}/cc_pqs/raw/CC-MAIN-2023-23/",
+                "OUTPUT_FOLDER": "{workspace_dir}/cc_pqs/openquestion/CC-MAIN-2023-23/"
+            },
+            "input": ["pq_names"],
+            "output": ["filtered_pq_names"]
+        },
+        "layer03":
+        {
+            "type": "To_Line_File",
+            "joint": "Default",
+            "input": ["filtered_pq_names", "filtered_pq_name_list_file_path"],
+            "output": ["filtered_pq_name_list_file_path"]
+        }
+    }
+}

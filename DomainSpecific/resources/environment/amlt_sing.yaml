@@ -1,0 +1,4 @@
+name: datanetwork
+description: Environment for DataNetwork
+# To be filled.
+image: ${image_repo}
