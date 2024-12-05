@@ -3,13 +3,13 @@
   <br />
   <br />
   <a href="https://huggingface.co/datasets/microsoft/RedStone"><img alt="MIT License" src="https://img.shields.io/badge/Hugging%20Face-Data Index-orange?logo=huggingface" /></a>
-  <a href="https://xxx"><img alt="MIT License" src="https://img.shields.io/badge/ArXiv-paper-green.svg" /></a>
+  <a href="https://arxiv.org/abs/2412.03398"><img alt="MIT License" src="https://img.shields.io/badge/ArXiv-2412.03398-green.svg" /></a>
   <a href="https://github.com/microsoft/RedStone/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
 </p>
 
 --------------------------------------------------------------------------------
 
-# [REDSTONE : Curating General, Code, Math, and QA Data for Large Language Models](xxx)
+# [REDSTONE : Curating General, Code, Math, and QA Data for Large Language Models](https://arxiv.org/abs/2412.03398)
 
 **RedStone** is an innovative and scalable pipeline designed to extract and process data from a vast amount of web content, facilitating the creation of diverse and comprehensive pre-training datasets. We demonstrate its capabilities by building pre-training datasets across multiple domains, including general, code, mathematics, and question-answering. REDSTONE's flexibility allows it to easily adapt to various specialized fields.
 
@@ -90,7 +90,15 @@ If you have the appropriate licenses, **we encourage you to use these scripts to
 # Citation
 If you find this repository useful, please consider citing our work:
 ```
-xxx
+@misc{chang2024redstonecuratinggeneralcode,
+      title={RedStone: Curating General, Code, Math, and QA Data for Large Language Models}, 
+      author={Yaoyao Chang and Lei Cui and Li Dong and Shaohan Huang and Yangyu Huang and Yupan Huang and Scarlett Li and Tengchao Lv and Shuming Ma and Qinzheng Sun and Wenhui Wang and Furu Wei and Ying Xin and Mao Yang and Qiufeng Yin and Xingxing Zhang},
+      year={2024},
+      eprint={2412.03398},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2412.03398}, 
+}
 ```
 
 # License
