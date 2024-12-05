@@ -90,7 +90,7 @@ If you have the appropriate licenses, **we encourage you to use these scripts to
 # Citation
 If you find this repository useful, please consider citing our work:
 ```
-@misc{chang2024redstonecuratinggeneralcode,
+@misc{2024redstone,
       title={RedStone: Curating General, Code, Math, and QA Data for Large Language Models}, 
       author={Yaoyao Chang and Lei Cui and Li Dong and Shaohan Huang and Yangyu Huang and Yupan Huang and Scarlett Li and Tengchao Lv and Shuming Ma and Qinzheng Sun and Wenhui Wang and Furu Wei and Ying Xin and Mao Yang and Qiufeng Yin and Xingxing Zhang},
       year={2024},
