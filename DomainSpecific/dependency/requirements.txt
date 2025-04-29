@@ -7,7 +7,7 @@ html5lib==1.1
 newspaper3k==0.2.8
 beautifulsoup4==4.12.2
 warcio==1.7.4
-markdownify==0.11.6
+markdownify==0.14.1
 #cchardet==2.1.7
 numpy==1.24.4
 scipy==1.10.1
