@@ -11,7 +11,7 @@ markdownify==0.11.6
 #cchardet==2.1.7
 numpy==1.24.4
 scipy==1.10.1
-requests==2.32.2
+requests==2.32.4
 pyarrow==14.0.1
 jsonlines==3.1.0
 #networkx==3.1
