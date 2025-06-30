@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 3. Download filters
    
-Please download all the filtering models used for domain-specific data processing [here](https://drive.google.com/file/d/1FJCEQa1mWZ2gGD_NdAJibeKk6UaZhi7R/view?usp=drive_link), and then unzip them. The sample codes of applying these models could refer to core/layers/transform/{math/mcq/openquestion}_filter_layer.py
+Please download all the filtering models used for domain-specific data processing [here](https://drive.google.com/file/d/1TQ112I1rjNqkH8acmile7i9ERQzSEmC4/view?usp=sharing), and then unzip them. The sample codes of applying these models could refer to core/layers/transform/{math/mcq/openquestion}_filter_layer.py
 
 ```
 tar -zxvf models.tar.gz
